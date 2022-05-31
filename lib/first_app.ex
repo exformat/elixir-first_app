@@ -12,12 +12,27 @@ defmodule FIRST_APP do
       :world
 
   """
+
+
   def hello do
-    calcPI()
+    x = IO.gets("x: ") |> Integer.parse()
+    y = IO.gets("y: ") |> Integer.parse()
+    vector2 = {:vector2, x, y}
+
+    IO.puts("vector: " <> vector2)
+    #limit = IO.getn("please, enter limit: ", 5)
+    #IO.puts("limit " <> limit)
+    #calcPI()
   end
 
+
+  def add(a, b) do
+    a + b
+  end
+
+
   def calcPI() do
-    PI = 3 + lineNilacant(2, 0)
+    myPI = 3 + lineNilacant(2, 0)
   end
 
 
@@ -26,12 +41,10 @@ defmodule FIRST_APP do
     b = start + 1
     c = start + 2
 
-    if start < 1_000_000 do
-     result = result + 4 / (a * b * c) - lineNilacant(c, result)
+    if start < 1000 do
+      result = result + 4 / (a * b * c) - lineNilacant(c, result)
     else
       result
     end
-
-
   end
 end
