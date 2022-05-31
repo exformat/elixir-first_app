@@ -39,7 +39,7 @@ defmodule Vector2 do
   end
 
 
-
+#hand test functions)))
 def start() do
   vec1 = {:vec1, 20, 20}
   vec2 = {:vec2, 10, 10}
